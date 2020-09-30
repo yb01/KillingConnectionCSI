@@ -5,7 +5,7 @@
 - 5000 nodes
 - Load test only
 - WCM disabled
-- Perf-test tool: Arktos or community?
+- Perf-test tool: https://github.com/sonyafenge/perf-tests.git
 - ETCD 3.4.3
 - Leader-election disabled
 - Coredump enabled
