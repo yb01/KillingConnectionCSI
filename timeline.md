@@ -15,7 +15,7 @@
 
 ### Build Date: 06/18
 
-- Commit: 9c050
+- Commit: 91f3f2bb1d89038223264eb246552e856559c050
 
 - Runner: Joe
 
@@ -24,6 +24,7 @@
   -  The load test completed with 1 failure that many objects got timed out as usual
   - Not many “took too long” warning of “registry/leases/kube-node-lease/hollow-node” as usual. There are only 2712 out of the 38294 “took too long” warnings. It used to be more than 80%.
   - There are many context canceled errors in the etcd.log
+  - Log: jundev2:/home/shaoj9/logs/perf-test/gce-5000/arktos/0929-0618-91f3
 
 
 
@@ -40,7 +41,7 @@
 
 ### Build Date: 09/24
 
-- Commit: 25120
+- Commit: 40fd8c82fbd0446c2bf32a558004849335025120
 
 - Runner: Sonya
 
