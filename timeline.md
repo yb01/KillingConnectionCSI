@@ -9,7 +9,8 @@
 - ETCD 3.4.3
 - Leader-election disabled
 - Coredump enabled
-- insecure-port enabled
+- Insecure-port enabled
+- Prometheus enabled
 
 
 
