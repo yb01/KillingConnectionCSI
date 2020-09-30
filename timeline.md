@@ -16,7 +16,7 @@
 
 
 ### Build Date: 06/12 No fail
-
+date of run:
 
 
 ### Build Date: 06/18
@@ -24,6 +24,8 @@
 - Commit: 91f3f2bb1d89038223264eb246552e856559c050
 
 - Runner: Joe
+
+- Date of run:
 
 - Result: 
   - Many  Kube-apiserver panics. “killing connection/stream”
@@ -40,6 +42,8 @@
 
 - Runner: Vinay
 
+- Date of run:
+
 - Result: 
   -  load test completed with timeouts. No panic or killing connection logs.
 
@@ -50,6 +54,8 @@
 - Commit: 40fd8c82fbd0446c2bf32a558004849335025120
 
 - Runner: Sonya
+
+- Date of run:
 
 - Result: 
   - Kube-apiserver Panic: killing connection/stream
