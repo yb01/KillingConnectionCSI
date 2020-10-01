@@ -123,6 +123,17 @@
   - Logs don't show "killing connection" or panics or apiserver kills.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep30_ark_jun30_3f91_etcd343_5k_1api
 
+### Build Date: 07/23 - load test failed but completed with timeouts
+- Commit: b82af68a72d74bd86f652cf5bb7318beee547601
+- Runner: Vinay
+- Date of run: Sep 30
+- Test: load
+- Result:
+  - Load test completed with object timeouts.
+  - Logs don't show "killing connection" or panics or apiserver kills.
+  - root@vinaydev2:/root/logs/perf-test/sep29_ark_jul23_etcd343_5k_1api
+
+
 ### Build Date: 09/24
 
 - Commit: 40fd8c82fbd0446c2bf32a558004849335025120
