@@ -115,6 +115,20 @@
   - Logs don't show "killing connection" or panics or apiserver kills.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep29_ark_jun25_etcd343_5k_1api
   
+ ### Build Date: 06/25 re-run x
+- Commit: 6b17cef2ea78353b8981a0a896d468e97f287a84
+- Runner: Jun
+- Date of run: Oct 1
+- Test: load
+- Result:
+  - No kube-apiserver panics. There are kubelet panics invalid memory address or nil pointer dereference panics as usual.
+  - There are 256 connection refused errors in apiserver.
+  - There are 524587 “took too long” warnings. 404064 of them are for the key “registry/leases/kube-node-lease/hollow-node-***”
+  - There are two context canceled errors in the etcd.log due to “took too long to execute”
+  - The logs can be found under GCP project: Scalability-testing at  jundev: /home/shaoj9/logs/perf-test/gce-5000/arktos/0930-0625-1f3
+  - Prometheus report can be found at http://34.83.153.175:9090/
+
+  
 ### Build Date: 06/30 - load test failed but completed with timeouts
 - Commit: 3f91cac7dcbaed9b5cb1981de329dc61e93c7376
 - Runner: Vinay
