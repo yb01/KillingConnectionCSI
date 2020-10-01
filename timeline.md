@@ -134,7 +134,7 @@
   - root@vinaydev2:/root/logs/perf-test/sep29_ark_jul23_etcd343_5k_1api
 
 ### Build Date: 08/13 - load test crashed (seg fault)
-- Commit: 
+- Commit: 50e561d3b3e5ca125bf422560748e106a335d94c
 - Runner: Vinay
 - Date of run: Sep 29
 - Test: load
