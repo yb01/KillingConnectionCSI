@@ -12,6 +12,26 @@
 - Insecure-port enabled
 - Prometheus enabled
 
+### Build Date: Pre-Alkaid  - Baseline: density test passed, load test failed but completed with timeouts
+- Commit: 75e94764
+- Runner: Vinay
+- Date of run: Sep 22
+- Test: density + load
+- Result:
+  - Density test passed. Load test failed but completed with object timeouts.
+  - Logs don't show "killing connection" or panics or apiserver kills.
+  - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep22_pre_alkaid_etcd343_5k_1api
+
+### Build Date: Apr 05  - density and load tests failed but completed with timeouts
+- Commit: 4fa2fd3d1385cc71a11a4e5216ea928c7a1e4ad8
+- Runner: Vinay
+- Date of run: Sep 23
+- Test: density + load
+- Result:
+  - Density test passed. Load test completed with object timeouts.
+  - Logs don't show "killing connection" or panics or apiserver kills.
+  - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep23_ark_apr_etcd343_5k_1api
+
 ### Build Date: 06/10 No fail
 
 
