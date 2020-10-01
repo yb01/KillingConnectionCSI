@@ -115,11 +115,14 @@
   - Logs don't show "killing connection" or panics or apiserver kills.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep29_ark_jun25_etcd343_5k_1api
   
- ### Build Date: 06/25 re-run x
+ ### Build Date: 06/25 re-run 
 - Commit: 6b17cef2ea78353b8981a0a896d468e97f287a84
 - Runner: Jun
 - Date of run: Oct 1
 - Test: load
+- Env: export MASTER_DISK_SIZE=500GB MASTER_ROOT_DISK_SIZE=500GB KUBE_GCE_ZONE=us-west1-b MASTER_SIZE=n1-highmem-96 NODE_SIZE=n1-highmem-16 NUM_NODES=55 NODE_DISK_SIZE=1000GB GOPATH=$HOME/go KUBE_GCE_ENABLE_IP_ALIASES=true KUBE_GCE_PRIVATE_CLUSTER=true CREATE_CUSTOM_NETWORK=true KUBE_GCE_INSTANCE_PREFIX=node5000-0625  KUBE_GCE_NETWORK=node5000-0625 ETCD_QUOTA_BACKEND_BYTES=8589934592 TEST_CLUSTER_LOG_LEVEL=--v=2  SHARE_PARTITIONSERVER=true APISERVERS_EXTRA_NUM=0 WORKLOADCONTROLLER_EXTRA_NUM=0 ETCD_EXTRA_NUM=0 LOGROTATE_FILES_MAX_COUNT=10 LOGROTATE_MAX_SIZE=200M KUBEMARK_NUM_NODES=5000
+- Cmd: 
+GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubemark --kubeconfig=/home/sonyali/go/src/k8s.io/arktos/test/kubemark/resources/kubeconfig.kubemark --report-dir=/home/sonyali/logs/perf-test/gce-5000/arktos/0930-0625 --testconfig=testing/load/config.yaml 
 - Result:
   - No kube-apiserver panics. There are kubelet panics invalid memory address or nil pointer dereference panics as usual.
   - There are 256 connection refused errors in apiserver.
