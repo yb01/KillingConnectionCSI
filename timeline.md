@@ -3,6 +3,8 @@
 ### Common Test Setup (specify specific test change below )
 
 - 5000 nodes
+- 1 Apiserver
+- 1 ETCD instance
 - Load test only
 - WCM disabled
 - Perf-test tool: https://github.com/sonyafenge/perf-tests.git
