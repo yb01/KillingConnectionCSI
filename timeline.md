@@ -62,16 +62,6 @@
   - Logs don't show "killing connection" or panics or apiserver kills.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep28_ark_may26_etcd343_5k_1api
 
-### Build Date: Jun 25  - load test failed but completed with timeouts
-- Commit: 6b17cef2ea78353b8981a0a896d468e97f287a84
-- Runner: Vinay
-- Date of run: Sep 29
-- Test: load
-- Result:
-  - Load test completed with object timeouts.
-  - Logs don't show "killing connection" or panics or apiserver kills.
-  - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep29_ark_jun25_etcd343_5k_1api
-
 
 ### Build Date: 06/10 No fail
 
@@ -119,6 +109,26 @@ date of run:
 - Result: 
   -  N/A
 
+### Build Date: Jun 25  - load test failed but completed with timeouts
+- Commit: 6b17cef2ea78353b8981a0a896d468e97f287a84
+- Runner: Vinay
+- Date of run: Sep 29
+- Test: load
+- Result:
+  - Load test completed with object timeouts.
+  - Logs don't show "killing connection" or panics or apiserver kills.
+  - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep29_ark_jun25_etcd343_5k_1api
+
+### Build Date: Jun 25 with WCM  - load test failed but completed with lots of timeout objects, lots of 'killing connection' logs
+- Commit: 6b17cef2ea78353b8981a0a896d468e97f287a84
+- Runner: Vinay
+- Date of run: Sep 24
+- Test: load
+- Result:
+  - Load test completed with object timeouts.
+  - Amount of apiserver logging indicates it was very busy
+  - Logs show "killing connection" or panics.
+  - root@vinaydev2:/root/logs/perf-test/sep24_ark_jun25_etcd343_5k_1api
 
 ### Build Date: 09/24
 
