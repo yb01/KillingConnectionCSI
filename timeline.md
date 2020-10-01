@@ -133,7 +133,17 @@
   - Logs don't show "killing connection" or panics or apiserver kills.
   - root@vinaydev2:/root/logs/perf-test/sep29_ark_jul23_etcd343_5k_1api
 
-
+### Build Date: 08/13 - load test crashed (seg fault)
+- Commit: 
+- Runner: Vinay
+- Date of run: Sep 29
+- Test: load
+- Result:
+  - Load test completed with object timeouts.
+  - Amount of apiserver logging indicates it was very busy
+  - Logs show "killing connection", panics.
+  - root@vinaydev2:/root/logs/perf-test/sep29_ark_aug13_etcd343_5k_1api
+  
 ### Build Date: 09/24
 
 - Commit: 40fd8c82fbd0446c2bf32a558004849335025120
