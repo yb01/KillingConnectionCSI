@@ -31,6 +31,28 @@
   - Density test passed. Load test completed with object timeouts.
   - Logs don't show "killing connection" or panics or apiserver kills.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep23_ark_apr_etcd343_5k_1api
+  
+### Build Date: May 21  - load test failed but completed with timeouts
+- Commit: 82b1405efe8475a8ee26fffce06ec39454aca9b4
+- Runner: Vinay
+- Date of run: Sep 26
+- Test: load
+- Result:
+  - Load test completed with object timeouts.
+  - Logs don't show "killing connection" or panics or apiserver kills.
+  - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep26_ark_may21_etcd343_5k_1api
+
+### Build Date: May 26  - load test failed but completed with timeouts
+- Commit: 
+- Runner: Vinay
+- Date of run: Sep 28
+- Test: load
+- Result:
+  - Load test completed with object timeouts.
+  - Logs don't show "killing connection" or panics or apiserver kills.
+  - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep28_ark_may26_etcd343_5k_1api
+
+
 
 ### Build Date: 06/10 No fail
 
