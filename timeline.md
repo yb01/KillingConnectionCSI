@@ -33,9 +33,11 @@ apiserver received an error that is not an metav1.Status: &errors.errorString{s:
 
 Usually before it was killed by kubelet.
 
-![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) means issue is not found
-![#c5f015](https://via.placeholder.com/15/000000/000000?text=+) means this test does not fit the binary search test and can be ignored
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) means issue is found
+All build shall be labelled as the following:
+
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) means issue is not found
+- ![#c5f015](https://via.placeholder.com/15/000000/000000?text=+) means this test does not fit the binary search test and can be ignored
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) means issue is found
 
 ### Investigation Metrics:
 - 
