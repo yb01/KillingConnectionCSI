@@ -67,6 +67,7 @@ Usually before it was killed by kubelet.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep26_ark_may21_etcd343_5k_1api
 
 ### Build Date: 05/26 - load test failed but completed with timeouts
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
 - Commit: 5f9c12ff6fda588abee41a107a7637895024f6f4
 - Runner: Vinay
 - Date of run: Sep 28
