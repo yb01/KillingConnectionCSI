@@ -14,7 +14,7 @@
 - Insecure-port enabled
 - Prometheus enabled
 
-### Definition of "POSITIVE" identification of target issue
+### Definition of identification of target issue
 - **kubelet** kills apiserver, log has the following:
 ```
 killContainer "kube-apiserver"(id={"unknown" "2cdeaae2b172d97c85ecedaff11a2a2f0d4baced5c28138138efb4bde8741b84"}) for pod "kube-apiserver-june11-1a0w1e-kubemark-master_kube-system_system(87bfba049d75e1ed76c1162a027a2db7)" failed: rpc error: code = DeadlineExceeded desc = context deadline exceeded
@@ -33,11 +33,15 @@ apiserver received an error that is not an metav1.Status: &errors.errorString{s:
 
 Usually before it was killed by kubelet.
 
+![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) means issue is not found
+![#c5f015](https://via.placeholder.com/15/000000/000000?text=+) means this test does not fit the binary search test and can be ignored
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) means issue is found
+
 ### Investigation Metrics:
 - 
 
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 75e94764
 - Runner: Vinay
 - Date of run: Sep 22
@@ -48,7 +52,7 @@ Usually before it was killed by kubelet.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep22_pre_alkaid_etcd343_5k_1api
 
 ### Build Date: 04/05 - density and load tests failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 4fa2fd3d1385cc71a11a4e5216ea928c7a1e4ad8
 - Runner: Vinay
 - Date of run: Sep 23
@@ -59,7 +63,7 @@ Usually before it was killed by kubelet.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep23_ark_apr_etcd343_5k_1api
   
 ### Build Date: 05/21 - load test failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 82b1405efe8475a8ee26fffce06ec39454aca9b4
 - Runner: Vinay
 - Date of run: Sep 26
@@ -70,7 +74,7 @@ Usually before it was killed by kubelet.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep26_ark_may21_etcd343_5k_1api
   
 ### Build Date: 05/21 - density + load test failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 82b1405efe8475a8ee26fffce06ec39454aca9b4
 - Runner: Vinay
 - Date of run: Sep 30
@@ -81,7 +85,7 @@ Usually before it was killed by kubelet.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep30_ark_may21_etcd343_5k_1api
 
 ### Build Date: 05/26 - load test failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 5f9c12ff6fda588abee41a107a7637895024f6f4
 - Runner: Vinay
 - Date of run: Sep 28
@@ -106,7 +110,7 @@ Usually before it was killed by kubelet.
   - root@vinaydev2:/root/logs/perf-test/sep26_ark_jun12_etcd343_5k_1api
   
 ### Build Date: 06/12 re-run - load test failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 6804ff1aa718858619b399ecb921a2450710582a
 - Runner: Vinay
 - Date of run: Sep 28
@@ -117,7 +121,7 @@ Usually before it was killed by kubelet.
   - root@vinaydev2:/root/logs/perf-test/sep28_ark_jun12_etcd343_5k_1api
 
 ### Build Date: 06/12 - density + load test failed but completed with timeouts
-- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 6804ff1aa718858619b399ecb921a2450710582a
 - Runner: Vinay
 - Date of run: Sep 30
@@ -221,7 +225,7 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
   
 ### Build Date: 09/24
 
-- Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `POSITIVE`
+- Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
 - Commit: 40fd8c82fbd0446c2bf32a558004849335025120
 
