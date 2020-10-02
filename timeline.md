@@ -14,6 +14,22 @@
 - Insecure-port enabled
 - Prometheus enabled
 
+### Definition of "Positive" identification of target issue
+- kubelet kills apiserver, log like:
+```
+Sep 29 19:09:09 june11-1a0w1e-kubemark-master kubelet[2825]: E0929 19:09:09.515732    2825 kuberuntime_manager.go:936] killContainer "kube-apiserver"(id={"unknown" "2cdeaae2b172d97c85ecedaff11a2a2f0d4baced5c28138138efb4bde8741b84"}) for pod "kube-apiserver-june11-1a0w1e-kubemark-master_kube-system_system(87bfba049d75e1ed76c1162a027a2db7)" failed: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+```
+
+- apiserver has the following "killing connection"
+```
+Observed a panic: &errors.errorString{s:"killing connection/stream because serving request timed out and response had been started"}
+```
+
+And 
+```
+apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}
+```
+
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
 - Commit: 75e94764
 - Runner: Vinay
