@@ -31,7 +31,7 @@ And
 apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}
 ```
 
-Usually before it being killed by kubelet.
+Usually before it was killed by kubelet.
 
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
 - Commit: 75e94764
