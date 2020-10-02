@@ -34,7 +34,7 @@ apiserver received an error that is not an metav1.Status: &errors.errorString{s:
 Usually before it was killed by kubelet.
 
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `ngeative`
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
 - Commit: 75e94764
 - Runner: Vinay
 - Date of run: Sep 22
@@ -184,6 +184,8 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
   - root@vinaydev2:/root/logs/perf-test/sep29_ark_aug13_etcd343_5k_1api
   
 ### Build Date: 09/24
+
+- Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `POSITIVE`
 
 - Commit: 40fd8c82fbd0446c2bf32a558004849335025120
 
