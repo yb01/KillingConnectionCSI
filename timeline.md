@@ -19,6 +19,7 @@
 ```
 killContainer "kube-apiserver"(id={"unknown" "2cdeaae2b172d97c85ecedaff11a2a2f0d4baced5c28138138efb4bde8741b84"}) for pod "kube-apiserver-june11-1a0w1e-kubemark-master_kube-system_system(87bfba049d75e1ed76c1162a027a2db7)" failed: rpc error: code = DeadlineExceeded desc = context deadline exceeded
 ```
+Make a note of the first date and time this happened.
 
 - **apiserver** has the following "killing connection"
 ```
@@ -29,6 +30,8 @@ And
 ```
 apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}
 ```
+
+Usually before it being killed by kubelet.
 
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
 - Commit: 75e94764
