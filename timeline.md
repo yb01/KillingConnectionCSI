@@ -135,6 +135,8 @@ All build shall be labelled as the following:
 
 ### Build Date: 06/18
 
+- Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+
 - Commit: 91f3f2bb1d89038223264eb246552e856559c050
 
 - Runner: Joe
