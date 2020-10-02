@@ -197,6 +197,7 @@ All build shall be labelled as the following:
   - root@vinaydev2:/root/logs/perf-test/sep24_ark_jun25_etcd343_5k_1api
   
 ### Build Date: 06/25 re-run - load test failed but completed with timeouts
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: 6b17cef2ea78353b8981a0a896d468e97f287a84
 - Runner: Vinay
 - Date of run: Sep 29
