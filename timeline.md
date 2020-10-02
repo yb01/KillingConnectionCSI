@@ -80,6 +80,7 @@ Usually before it was killed by kubelet.
 ### Build Date: 06/10 No fail
 
 ### Build Date: 06/12 with WCM - load test failed but completed with lots of timeout objects, lots of 'killing connection' logs
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NOT APPLICABLE`
 - Commit: 6804ff1aa718858619b399ecb921a2450710582a
 - Runner: Vinay
 - Date of run: Sep 26
@@ -91,6 +92,7 @@ Usually before it was killed by kubelet.
   - root@vinaydev2:/root/logs/perf-test/sep26_ark_jun12_etcd343_5k_1api
   
 ### Build Date: 06/12 re-run - load test failed but completed with timeouts
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
 - Commit: 6804ff1aa718858619b399ecb921a2450710582a
 - Runner: Vinay
 - Date of run: Sep 28
