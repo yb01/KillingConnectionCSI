@@ -236,6 +236,7 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep30_ark_jun30_3f91_etcd343_5k_1api
 
 ### Build Date: 07/23 - load test failed but completed with timeouts
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
 - Commit: b82af68a72d74bd86f652cf5bb7318beee547601
 - Runner: Vinay
 - Date of run: Sep 30
