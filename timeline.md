@@ -177,6 +177,14 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
   - Logs don't show "killing connection" or panics or apiserver kills.
   - root@vinaydev2:/root/logs/perf-test/sep29_ark_jul23_etcd343_5k_1api
 
+### Build Date: 08/11 - load test in progress
+- Commit: 5069e78665708f7949af52a77aa8581998d573b0.   +   Commit: 79d954c790c63f6f8af0ecec665243d1d2af95f6
+- Runner: Sonya
+- Date of run: Oct 1
+- Test: load
+- Result:
+  - 
+  
 ### Build Date: 08/13 - load test crashed (seg fault)
 - Commit: 50e561d3b3e5ca125bf422560748e106a335d94c
 - Runner: Vinay
