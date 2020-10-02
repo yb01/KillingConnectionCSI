@@ -183,7 +183,6 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
 - Date of run: Oct 1
 - Test: load
 - Result:
-  - 
   
 ### Build Date: 08/13 - load test crashed (seg fault)
 - Commit: 50e561d3b3e5ca125bf422560748e106a335d94c
