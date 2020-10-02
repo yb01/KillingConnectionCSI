@@ -241,6 +241,24 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
   - logs can be found under GCP project: workload-controller-manager on sonya-useast1: /home/sonyali/logs/perf-test/gce-5000/arktos/0929-communityperf-1a0w1e
   - Prometheus report can be found at [http://35.231.121.60:9090/](https://nam11.safelinks.protection.outlook.com/?url=http%3A%2F%2F35.231.121.60%3A9090%2F&data=02|01|peng.du%40futurewei.com|50f8201d0df9413f5dbf08d865752edb|0fee8ff2a3b240189c753a1d5591fedc|1|0|637370901289650492&sdata=uINL%2B1heyhSHkiGabpRKXAXtUwaE6Nstz0qmVzd24Sc%3D&reserved=0) or snapshot can be found on sonya-useast1: /home/sonyali/logs/perf-test/gce-5000/arktos/0929-communityperf-1a0w1e/logs/crashed/kubemarkmaster/prometheus/snapshots
 
+
+### Build Date: 09/24
+
+- Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+
+- Commit: 196d649b2c33eec55d70a96b7cc8b302c9ede698
+
+- Runner: Jun
+
+- Date of run: Oct 1
+
+- Result: 
+  - The load test completed with 1 failure: Object creation failed due to connection refused,  deletion error: etcdserver: too many requests, and  objects timed out.
+  - ApiServer restarted several times, with many killing connection panics
+  - The logs can be found under GCP project: Scalability-testing at  jundev2: /home/shaoj9/logs/perf-test/gce-5000/arktos/1001-perflog/logs
+  - The prometheus report can be found at http://35.233.179.148:9090/graph and its snapshots are under GCP project: Scalability-testing at  jundev2: /home/shaoj9/logs/perf-test/gce-5000/arktos/1001-perflog/snapshots
+  - Pprof are collected every 30 minutes and can be found under under GCP project: Scalability-testing at  jundev2: /home/shaoj9/logs/perf-test/gce-5000/arktos/1001-perflog/pprof
+
  
 
 
