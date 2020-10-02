@@ -31,7 +31,7 @@ And
 apiserver received an error that is not an metav1.Status: &errors.errorString{s:"context canceled"}
 ```
 
-Usually before it was killed by kubelet.
+Usually it started from the time apiserver was killed by kubelet.
 
 All build shall be labelled as the following:
 
