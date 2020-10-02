@@ -169,13 +169,9 @@ All build shall be labelled as the following:
 ### Build Date: 06/18
 
 - Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
-
 - Commit: 91f3f2bb1d89038223264eb246552e856559c050
-
 - Runner: Joe
-
 - Date of run:
-
 - Result: 
   - Many  Kube-apiserver panics. “killing connection/stream”
   -  The load test completed with 1 failure that many objects got timed out as usual
@@ -254,6 +250,7 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
 - Result:
   
 ### Build Date: 08/13 - load test crashed (seg fault)
+- Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 - Commit: 50e561d3b3e5ca125bf422560748e106a335d94c
 - Runner: Vinay
 - Date of run: Sep 29
