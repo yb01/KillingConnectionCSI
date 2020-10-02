@@ -14,7 +14,7 @@
 - Insecure-port enabled
 - Prometheus enabled
 
-### Definition of "Positive" identification of target issue
+### Definition of "POSITIVE" identification of target issue
 - **kubelet** kills apiserver, log has the following:
 ```
 killContainer "kube-apiserver"(id={"unknown" "2cdeaae2b172d97c85ecedaff11a2a2f0d4baced5c28138138efb4bde8741b84"}) for pod "kube-apiserver-june11-1a0w1e-kubemark-master_kube-system_system(87bfba049d75e1ed76c1162a027a2db7)" failed: rpc error: code = DeadlineExceeded desc = context deadline exceeded
@@ -45,6 +45,7 @@ Usually before it was killed by kubelet.
   - sonyafenge@sonyadev:/home/sonyafenge/vinaykul/logs/perf-test/sep22_pre_alkaid_etcd343_5k_1api
 
 ### Build Date: 04/05 - density and load tests failed but completed with timeouts
+- Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `NEGATIVE`
 - Commit: 4fa2fd3d1385cc71a11a4e5216ea928c7a1e4ad8
 - Runner: Vinay
 - Date of run: Sep 23
