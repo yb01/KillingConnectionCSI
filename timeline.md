@@ -43,7 +43,37 @@ All build shall be labelled as the following:
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) means issue is found
 
 ### Investigative Metrics:
-- 
+- The step that the test reached.
+  Search for log message as follows in nohup.out to find it.
+  ```
+  I1002 06:17:49.991954    5672 simple_test_executor.go:135] Step "Starting measurements" started
+  ```
+
+  FYI, the steps in load test are as follows:
+  1. Starting measurements
+  2. Creating SVCs
+  3. Creating PriorityClass for DaemonSets
+  4. Starting measurement for waiting for pods
+  5. Creating objects
+  6. Waiting for pods to be running
+  7. Scaling and updating objects
+  8. Waiting for objects to become scaled
+  9. Deleting objects
+  10. Waiting for pods to be deleted
+  11. Deleting PriorityClass for DaemonSets
+  12. Deleting SVCs
+  13. Collecting measurements
+
+
+- The size of etcd. Collect the data on:
+  1. size of db file ([saved_etcd_dir]/data/member/snap/db). 
+  2. Number of KV pairs. 
+     - start etcd using the saved etcd data. Command: etcd --data-dir [saved_etcd_dir]/data
+     - get the following data
+        - the number of all KV pairs. Command : etcdctl get "" --prefix=true --keys-only  | awk NF | wc -l
+        - the number of deployments pairs. Command : etcdctl get "/registry/deployments" --prefix=true --keys-only  | awk NF | wc -l
+        - the number of endpoints pairs. Command : etcdctl get "/registry/services/endpoints" --prefix=true --keys-only  | awk NF | wc -l     
+        
 
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
 - Verdict: ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)
