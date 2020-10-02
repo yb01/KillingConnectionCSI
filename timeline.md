@@ -39,7 +39,7 @@ All build shall be labelled as the following:
 - ![#c5f015](https://via.placeholder.com/15/000000/000000?text=+) means this test does not fit the binary search test and can be ignored
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) means issue is found
 
-### Investigation Metrics:
+### Investigative Metrics:
 - 
 
 ### Build Date: Pre-Alkaid - Baseline: density test passed, load test failed but completed with timeouts
