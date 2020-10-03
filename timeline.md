@@ -242,12 +242,12 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
   - Logs don't show "killing connection" or panics or apiserver kills.
   - root@vinaydev2:/root/logs/perf-test/sep29_ark_jul23_etcd343_5k_1api
 
-### Build Date: 08/11 - load test in progress
+### Build Date: 08/11 - cancelled
 - Commit: 5069e78665708f7949af52a77aa8581998d573b0.   +   Commit: 79d954c790c63f6f8af0ecec665243d1d2af95f6
 - Runner: Sonya
 - Date of run: Oct 1
 - Test: load
-- Result:
+- Result: cancelled per build error
   
 ### Build Date: 08/13 - load test crashed (seg fault)
 - Verdict: ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
@@ -297,5 +297,22 @@ GOPATH=$HOME/go nohup ./clusterloader2/run-e2e.sh --nodes=5000 --provider=kubema
 
  
 
+### Private Build Date: 10/02
 
+
+- Commit: https://github.com/chenqianfzh/arktos/tree/ep-list-limit-10000
+
+- Runner: Sonya
+
+- Date of run: Oct 2
+
+- Result: 
+  - The load test finished with bunch of failure:
+    - Object creation failed due to connection refused
+    - Missing several test report, only EtcdMetrics and ResourceUsage generated
+    - Apiserver crashed with many killing connection panics
+    - ETCD crashed, I didn’t see any error information from etcd.log except: took too long (22.199132582s) to execute
+    - This run just used 5 hrs from beginning to display load finished.
+  - logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1002-qian-1a0w1e
+  - Prometheus snapshot is on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1002-qian-1a0w1e/logs/crashed/kubemarkmaster/prometheus
 
