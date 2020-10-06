@@ -1,6 +1,7 @@
 ## 10/05/2020
-### changes:
-finished and status update:
+### Changes
+TBD
+### Result
 Perf-tests load testing finished with bunch of object creation failure because “connection refused”
 Kube-apiserver crashed with error “killing connection/stream”
 Checked ETCD logs, there is no error log except warning “took too long to execute”
