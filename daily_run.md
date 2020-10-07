@@ -28,3 +28,18 @@ https://github.com/futurewei-cloud/arktos-perftest/commits/perf-20201005
 - Checked ETCD logs, there is no error log except warning “took too long to execute”
 - logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1005-daily1005-1a0w1e
  
+## 10/06/2020
+### Changes
+https://github.com/futurewei-cloud/arktos-perftest/commits/perf-20201006
+- private change to getClient() in etcd3
+- Add WatchListPageSize into reflector trace
+- Bugfix in ETCD3 store
+- Enable mutex/block profiling for kube-apiserver
+- Add trace for ETCD create and delete
+### Result
+- Perf-tests stopped after 6 hrs.
+- Perf-tests load testing failed with bunch of “connection refused” error, first error is at 07:44:22
+- Perf-test load testing stopped per one panic: runtime error: invalid memory address or nil pointer dereference
+- Kube-apiserver crashed with error “killing connection/stream”, first error is at 07:46.
+- Checked ETCD logs, there is no error log except warning “took too long to execute”
+- logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1006-daily1006-1a0w1e
