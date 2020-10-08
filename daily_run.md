@@ -63,3 +63,29 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201007
 - Checked ETCD logs, there is no error log except warning “took too long to execute”
 - logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1007-daily1007-1a0w1e
 - kube-apiserver.log increased a lot by “cacher.go:1248] Sent event resourceVersion…”. we may need fix or remove this logs, just in case this may impact regular log investigation.
+- Warining disappeared: "W1007 02:05:29.210768   14518 etcd_metrics.go:206] empty etcd cert or key, using http". all previous run has this warning keep 10-12 mins if we started from load testing. but this run don't have this warning.
+- previous run warning detail:
+```
+I1007 02:04:29.462079   14518 simple_test_executor.go:162] Step "Starting measurements" ended
+I1007 02:04:29.462088   14518 simple_test_executor.go:135] Step "Creating SVCs" started
+W1007 02:05:29.210768   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:06:29.392507   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:07:29.576302   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:08:29.755684   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:09:29.941178   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:10:30.124754   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:11:30.299306   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:12:30.496042   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:13:30.671285   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:14:30.852418   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+W1007 02:15:31.033455   14518 etcd_metrics.go:206] empty etcd cert or key, using http
+I1007 02:16:18.058678   14518 simple_test_executor.go:162] Step "Creating SVCs" ended
+I1007 02:16:18.058744   14518 simple_test_executor.go:135] Step "Creating PriorityClass for DaemonSets" started
+```
+- this run logs:
+```
+I1008 04:10:50.402085   20528 simple_test_executor.go:162] Step "Starting measurements" ended
+I1008 04:10:50.402093   20528 simple_test_executor.go:135] Step "Creating SVCs" started
+I1008 04:11:47.355919   20528 simple_test_executor.go:162] Step "Creating SVCs" ended
+I1008 04:11:47.355968   20528 simple_test_executor.go:135] Step "Creating PriorityClass for DaemonSets" started
+```
