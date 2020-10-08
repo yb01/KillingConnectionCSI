@@ -43,3 +43,23 @@ https://github.com/futurewei-cloud/arktos-perftest/commits/perf-20201006
 - Kube-apiserver crashed with error “killing connection/stream”, first error is at 07:46.
 - Checked ETCD logs, there is no error log except warning “took too long to execute”
 - logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1006-daily1006-1a0w1e
+
+## 10/07/2020
+### Changes
+https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201007
+- add pprof collecting
+- logs to trace etcd operation
+- log out cacher sent events
+- Set ListAndWatch list always from "0" - read from cache.
+- private change to getClient() in etcd3
+- Add WatchListPageSize into reflector trace
+- Bugfix in ETCD3 store
+- Enable mutex/block profiling for kube-apiserver
+- Add trace for ETCD create and delete
+### Result
+- Perf-tests stopped after 5 hrs.
+- Perf-tests load testing failed with bunch of “connection refused” error, first error is at 09:09:25
+- Kube-apiserver crashed with error “killing connection/stream”, first error is at 09:11:19.
+- Checked ETCD logs, there is no error log except warning “took too long to execute”
+- logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1007-daily1007-1a0w1e
+- kube-apiserver.log increased a lot by “cacher.go:1248] Sent event resourceVersion…”. we may need fix or remove this logs, just in case this may impact regular log investigation.
