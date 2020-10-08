@@ -89,7 +89,7 @@ I1008 04:10:50.402093   20528 simple_test_executor.go:135] Step "Creating SVCs" 
 I1008 04:11:47.355919   20528 simple_test_executor.go:162] Step "Creating SVCs" ended
 I1008 04:11:47.355968   20528 simple_test_executor.go:135] Step "Creating PriorityClass for DaemonSets" started
 ```
-- Comparing to 10/06, etcd log "took too long" is much less (616,985 5 hours run vs 3,984,223 on 10/06 6 hours run); more "cacher <objectType>: List" (1,236,025 vs. 450,311). This means API server cache was used much more than 10/07. Traffic shifted from ETCD to API server cache.
+- Comparing to 10/06, etcd log "took too long" is much less (616,985 5 hours run vs 3,984,223 on 10/06 6 hours run; community has 11,705 aug25_k8s-5k-1apiserver_qps200); more "cacher <objectType>: List" (1,236,025 vs. 450,311). This means API server cache was used much more than 10/07. Traffic shifted from ETCD to API server cache.
 ```
 trace.go:81] Trace[2063583751]: "cacher *core.Endpoints: List" (started: 2020-10-08 15:16:58.277917468 +0000 UTC m=+37.589668692) (total time: 3.115902002s):
 ```
