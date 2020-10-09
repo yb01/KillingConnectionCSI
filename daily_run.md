@@ -93,3 +93,15 @@ I1008 04:11:47.355968   20528 simple_test_executor.go:135] Step "Creating Priori
 ```
 trace.go:81] Trace[2063583751]: "cacher *core.Endpoints: List" (started: 2020-10-08 15:16:58.277917468 +0000 UTC m=+37.589668692) (total time: 3.115902002s):
 ```
+
+
+## 10/08/2020
+### Changes
+https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201008
+- 10/07 build plus following
+- Add log to check secret watch increasing.
+- revert the logging change, we got the info in 10-07 run already
+- Use original watch cache - does not support etcd partition
+- Add watched from resource verson into error
+- disable mizar controllers
+### Result
