@@ -110,3 +110,23 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201008
 - Kube-apiserver crashed with error “killing connection/stream”, first error is at 07:56:31.
 - Checked ETCD logs, there is no error log except warning “took too long to execute”
 - logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1008-daily1008-1a0w1e
+
+
+## 10/09/2020
+### Changes
+https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
+- 10/08 build plus following
+- Added API server watch cacher creation log.
+- Revert etcd partition changes in etcd3 store.List
+- Added some logs to find out watcher leaks
+- ETCD_SNAPSHOT_COUNT to 100000
+- Update log - reduce log from perf test; remove verified information
+- set GOMAXPROCS=96
+- Added some logs to find out watcher leaks
+- Removed the etcd partition config to start watching
+### Result
+- Perf-tests stopped after 5 hrs.
+- Perf-tests load testing failed with bunch of “connection refused” error, first error is at 07:28:56
+- Kube-apiserver crashed with error “killing connection/stream”, first error is at 07:32:31.
+- Checked ETCD logs, there is no error log except warning “took too long to execute”
+- logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1009-daily1009-1a0w1e
