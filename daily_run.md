@@ -148,4 +148,4 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
 - GCE cpu, network & disk metrics [here](screenshots/20201009)
 ### Analysis
 - First time kubelet killed apiserver 07:35:20.273837 UTC
-- 75330 in 763319 (98%) lines in etcd.log are "took too long“
+- 753300 in 763319 (98%) lines in etcd.log are "took too long“
