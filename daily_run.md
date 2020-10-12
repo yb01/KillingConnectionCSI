@@ -142,3 +142,4 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
 - Checked ETCD logs, there is no error log except warning “took too long to execute”
 - logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1009-daily1009-1a0w1e
 - GCE cpu, network & disk metrics [here](screenshots/20201009)
+- First time kubelet killed apiserver 07:35:20.273837 UTC
