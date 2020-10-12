@@ -149,5 +149,6 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
 ### Analysis
 - First time kubelet killed apiserver 07:35:20.273837 UTC
 - **"took too long”** : 
+    - Corresponds to "etcd_server_slow_apply_total" in Prometheus
     - 753300 in 763319 (98%) lines in etcd.log
-    - first one starts at 02:23:11.439679 UTC (5 mintes after etcd started at 02:18:23.766323 UTC)
+    - First one starts at 02:23:11.439679 UTC (5 mintes after etcd started at 02:18:23.766323 UTC)
