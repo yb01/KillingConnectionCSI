@@ -154,4 +154,6 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
     - Corresponds to "etcd_server_slow_apply_total" in Prometheus
     - 753300 in 763319 (98%) lines in etcd.log
     - First one starts at 02:23:11.439679 UTC (5 mintes after etcd started at 02:18:23.766323 UTC)
-    - Most *walk_fsync* and *backend_commit* duration below 4ms ([base on this query](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=etcd_disk_wal_fsync_duration_seconds_bucket&g0.tab=0&g1.range_input=6h&g1.end_input=2020-10-10%2009%3A00&g1.expr=etcd_disk_wal_fsync_duration_seconds_bucket&g1.tab=0))
+    - Most *walk_fsync* and *backend_commit* duration below 4ms ([base on this query](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=etcd_disk_wal_fsync_duration_seconds_bucket&g0.tab=0&g1.range_input=6h&g1.end_input=2020-10-10%2009%3A00&g1.expr=etcd_disk_wal_fsync_duration_seconds_bucket&g1.tab=0)), meaning no slow disk issue
+    - number of keys stops increasing around 6:50 UTC ([metrics](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=etcd_debugging_mvcc_keys_total&g0.tab=0))
+    - [etcd latency distribution](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=histogram_quantile(0.99%2Csum(rate(etcd_request_duration_seconds_bucket%5B1m%5D))%20by%20(le%2C%20operation%2C%20type))&g0.tab=0)
