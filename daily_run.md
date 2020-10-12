@@ -15,6 +15,15 @@
 - Cmd: 
 GOPATH=$HOME/go nohup ./perf-tests/clusterloader2/run-e2e.sh --nodes=5000 --provider=kubemark --kubeconfig=/home/sonyali/go/src/k8s.io/arktos/test/kubemark/resources/kubeconfig.kubemark --report-dir=/home/sonyali/logs/perf-test/gce-5000/arktos/1005-daily1005-1a0w1e --testconfig=testing/load/config.yaml --testconfig=testing/density/config.yaml 
 
+## Start Prometheus Server Using Stored Data
+```bash
+/home/sonyali/tools/prometheus-2.2.1.linux-amd64/prometheus  --web.listen-address=":9090" --storage.tsdb.path [path to prometheus snapshots]
+```
+
+For example:
+```bash
+prometheus  --web.listen-address=":9090" --storage.tsdb.path /home/sonyali/logs/perf-test/gce-5000/arktos/1009-daily1009-1a0w1e/logs/crashed/kubemarkmaster/prometheus/snapshots/20201010T155128Z-7d0bde96aec85605
+```
 
 ## 10/05/2020
 ### Changes
