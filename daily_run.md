@@ -154,4 +154,4 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
     - Corresponds to "etcd_server_slow_apply_total" in Prometheus
     - 753300 in 763319 (98%) lines in etcd.log
     - First one starts at 02:23:11.439679 UTC (5 mintes after etcd started at 02:18:23.766323 UTC)
-    - Most *walk_fsync* and *backend_commit* duration below 4ms
+    - Most *walk_fsync* and *backend_commit* duration below 4ms ([base on this query](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=etcd_disk_wal_fsync_duration_seconds_bucket&g0.tab=0&g1.range_input=6h&g1.end_input=2020-10-10%2009%3A00&g1.expr=etcd_disk_wal_fsync_duration_seconds_bucket&g1.tab=0))
