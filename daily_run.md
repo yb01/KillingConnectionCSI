@@ -21,6 +21,8 @@ sudo /home/sonyali/tools/prometheus-2.2.1.linux-amd64/prometheus --config.file="
 ```
 
 For example:
+On sonyadev4:
+
 ```bash
 sudo prometheus  --web.listen-address=":9090" --config.file="/home/sonyali/tools/prometheus-2.2.1.linux-amd64/prometheus.yml"  --storage.tsdb.path /home/sonyali/logs/perf-test/gce-5000/arktos/1009-daily1009-1a0w1e/logs/crashed/kubemarkmaster/prometheus/snapshots/20201010T155128Z-7d0bde96aec85605
 ```
