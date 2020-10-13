@@ -159,3 +159,23 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201009
     - Number of keys stops increasing around 6:50 UTC ([metrics](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=etcd_debugging_mvcc_keys_total&g0.tab=0))
     - [Etcd latency distribution](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=histogram_quantile(0.99%2Csum(rate(etcd_request_duration_seconds_bucket%5B1m%5D))%20by%20(le%2C%20operation%2C%20type))&g0.tab=0)
     - Resident memory usage around 40G, virtual memory around 70G at time of crash ([metrics](http://35.188.21.94:9090/graph?g0.range_input=6h&g0.end_input=2020-10-10%2009%3A00&g0.expr=process_resident_memory_bytes&g0.tab=0&g1.range_input=6h&g1.end_input=2020-10-10%2009%3A00&g1.expr=process_virtual_memory_bytes&g1.tab=0&g2.range_input=6h&g2.end_input=2020-10-10%2009%3A00&g2.expr=go_memstats_heap_alloc_bytes&g2.tab=0))
+
+
+## 10/12/2020 Pre-Alkaid
+### Changes
+https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
+- track etcd latency
+- Add process event log for Secret
+- Added logs to find out the watchers adding event with blocking
+- Add log for Reflector watchlistpagesize, createWatchChan by key, watc… 
+- ETCD 3.4.3
+- Insecure-port enabled
+- Coredump enabled
+- apiserver pprof enabled,  also enable metux and block pprof for kube-apiserver
+- Prometheus enabled
+- Perf-tests build: https://github.com/sonyafenge/perf-tests/commit/d9a552b4f2e00dfc4c12e74eddae0a5e10aeed71
+
+### Result
+- Perf-tests load testing finished with timeout error and took 11+ hrs.
+- Cluster is running good after perf-test finished
+- Logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/kubernetes/prealkaid1012-1a0w1e
