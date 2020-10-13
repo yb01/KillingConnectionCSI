@@ -200,19 +200,25 @@ root        3585  0.0  0.0   4280   792 ?        Ss   06:23   0:00 /bin/sh -c /u
 
 - controller-manager
 ```
-root        3592  0.0  0.0   4280   712 ?        Ss   06:23   0:00 /bin/sh -c /usr/local/bin/kube-controller-manager --v=2    --use-service-account-credentials --kubeconfig=/etc/srv/kubernetes/kube-controller-manager/kubeconfig --service-account-private-key-file=/etc/srv/kubernetes/server.key --root-ca-file=/etc/srv/kubernetes/ca.crt --allocate-node-cidrs=true --cluster-cidr=10.64.0.0/11 --service-cluster-ip-range=10.0.0.0/16 --terminated-pod-gc-threshold=100 1>>/var/log/kube-controller-manager.log 2>&1
+/bin/sh -c /usr/local/bin/kube-controller-manager --v=2    --use-service-account-credentials --kubeconfig=/etc/srv/kubernetes/kube-controller-manager/kubeconfig --service-account-private-key-file=/etc/srv/kubernetes/server.key --root-ca-file=/etc/srv/kubernetes/ca.crt --allocate-node-cidrs=true --cluster-cidr=10.64.0.0/11 --service-cluster-ip-range=10.0.0.0/16 --terminated-pod-gc-threshold=100 1>>/var/log/kube-controller-manager.log 2>&1
 ```
 
 - scheduler
 ```
-root        3626  0.0  0.0   4280   744 ?        Ss   06:23   0:00 /bin/sh -c /usr/local/bin/kube-scheduler --v=2   --kubeconfig=/etc/srv/kubernetes/kube-scheduler/kubeconfig 1>>/var/log/kube-scheduler.log 2>&1
+/bin/sh -c /usr/local/bin/kube-scheduler --v=2   --kubeconfig=/etc/srv/kubernetes/kube-scheduler/kubeconfig 1>>/var/log/kube-scheduler.log 2>&1
 ```
 
 - kubelet
 ```
-root        4113  0.0  0.0   4280   744 ?        Ss   06:23   0:00 /bin/sh -c /usr/local/bin/etcd --name=etcd-prealkaid1012-1a0w1e-kubemark-master --listen-peer-urls=http://127.0.0.1:2380 --advertise-client-urls=http://127.0.0.1:2379 --listen-client-urls=http://0.0.0.0:2379 --client-cert-auth --trusted-ca-file /etc/srv/kubernetes/etcd-apiserver-ca.crt --cert-file /etc/srv/kubernetes/etcd-apiserver-server.crt --key-file /etc/srv/kubernetes/etcd-apiserver-server.key --data-dir=/var/etcd/data 1>>/var/log/etcd.log 2>&1
+missing
+```
 
-root        4113  0.0  0.0   4280   744 ?        Ss   06:23   0:00 /bin/sh -c /usr/local/bin/etcd --name=etcd-prealkaid1012-1a0w1e-kubemark-master --listen-peer-urls=http://127.0.0.1:2380 --advertise-client-urls=http://127.0.0.1:2379 --listen-client-urls=http://0.0.0.0:2379 --client-cert-auth --trusted-ca-file /etc/srv/kubernetes/etcd-apiserver-ca.crt --cert-file /etc/srv/kubernetes/etcd-apiserver-server.crt --key-file /etc/srv/kubernetes/etcd-apiserver-server.key --data-dir=/var/etcd/data 1>>/var/log/etcd.log 2>&1
+- etcd
+```
+/bin/sh -c /usr/local/bin/etcd --name=etcd-prealkaid1012-1a0w1e-kubemark-master --listen-peer-urls=http://127.0.0.1:2380 --advertise-client-urls=http://127.0.0.1:2379 --listen-client-urls=http://0.0.0.0:2379 --client-cert-auth --trusted-ca-file /etc/srv/kubernetes/etcd-apiserver-ca.crt --cert-file /etc/srv/kubernetes/etcd-apiserver-server.crt --key-file /etc/srv/kubernetes/etcd-apiserver-server.key --data-dir=/var/etcd/data 1>>/var/log/etcd.log 2>&1
+
+/bin/sh -c /usr/local/bin/etcd --name=etcd-prealkaid1012-1a0w1e-kubemark-master --listen-peer-urls=http://127.0.0.1:2380 --advertise-client-urls=http://127.0.0.1:2379 --listen-client-urls=http://0.0.0.0:2379 --client-cert-auth --trusted-ca-file /etc/srv/kubernetes/etcd-apiserver-ca.crt --cert-file /etc/srv/kubernetes/etcd-apiserver-server.crt --key-file /etc/srv/kubernetes/etcd-apiserver-server.key --data-dir=/var/etcd/data 1>>/var/log/etcd.log 2>&1
 
 ```
+
 
