@@ -175,6 +175,8 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
 - Prometheus enabled
 - Perf-tests build: https://github.com/sonyafenge/perf-tests/commit/d9a552b4f2e00dfc4c12e74eddae0a5e10aeed71
 
+### Commands: [here](pre-alkaid-commands.md)
+
 ### Result
 - Perf-tests load testing finished with timeout error and took 11+ hrs.
 - Cluster is running good after perf-test finished
@@ -191,8 +193,6 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
     - [book disk](screenshots/pre-alkaid/master_pd.png)
 - [mirror network](screenshots/pre-alkaid/mirrored_Network.png), all zero
 - [network packets and bytes](screenshots/pre-alkaid/network_Bytes_Packets.png)
-
-### Commands: [here](pre-alkaid-commands.md)
 
 ### Analysis
 
