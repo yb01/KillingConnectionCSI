@@ -179,3 +179,7 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
 - Perf-tests load testing finished with timeout error and took 11+ hrs.
 - Cluster is running good after perf-test finished
 - Logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/kubernetes/prealkaid1012-1a0w1e
+
+### Prometheus
+- [Pre-Alkaid](http://35.188.21.94:9091/graph)
+- [10/09/2020 run)(http://35.188.21.94:9090/graph)
