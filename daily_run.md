@@ -182,4 +182,4 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
 
 ### Prometheus
 - [Pre-Alkaid](http://35.188.21.94:9091/graph)
-- [10/09/2020 run)(http://35.188.21.94:9090/graph)
+- [10/09/2020 run](http://35.188.21.94:9090/graph)
