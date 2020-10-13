@@ -180,6 +180,6 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
 - Cluster is running good after perf-test finished
 - Logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/kubernetes/prealkaid1012-1a0w1e
 
-### Prometheus
+### Prometheus Server
 - [Pre-Alkaid](http://35.188.21.94:9091/graph), set end time to 2020-10-10 09:00 and length to 6 hr
 - [10/09/2020 run](http://35.188.21.94:9090/graph), set end time to 2020-10-13 19:00 and length to 12 hr
