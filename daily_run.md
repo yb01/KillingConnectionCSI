@@ -199,3 +199,11 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
 - **"took too long”** : 
     - Appeared 71991 times ouf of 74282 lines in etcd.log **(97%)**
     - First one appeared at 06:36:54.343561 UTC, **13 mintues** after run started at 06:23:55.331373 UTC
+
+
+## 10/13/2020
+### Changes
+https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
+- 10/09 build plus following
+- Disable APIServerConfigManager in kubelet/hollow nod
+### Result
