@@ -224,3 +224,5 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
     - 285,247 times (288,895 total etcd lines, 98%) vs. 753,300 times on 10/09
     - first time it appeared at 00:00:41.855512 UTC, **7 minutes** after etcd starts
     - apiserver memory usage is still higher than baseline ([this](http://35.188.21.94:9092/graph?g0.range_input=6h&g0.end_input=2020-10-14%2006%3A00&g0.expr=process_resident_memory_bytes&g0.tab=0) vs [Pre-Alkaid](http://35.188.21.94:9091/graph?g0.range_input=12h&g0.end_input=2020-10-13%2018%3A30&g0.expr=process_resident_memory_bytes&g0.tab=0))
+        - apiserver is running with "--target-ram-mb=300000"
+        - This value is used for kube-apiserver to guess the size of the cluster and to configure the deserialize cache size and watch cache sizes inside the API server based on [this](https://applatix.com/making-kubernetes-production-ready-part-2/)
