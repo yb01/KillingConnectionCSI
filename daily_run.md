@@ -213,6 +213,12 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
 - Logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1013-daily1013-1a0w1e
 - ETCD "took too long":
     - 285,247 times vs. 753,300 times on 10/09
-    
+
+### Prometheus Server
+- [Pre-Alkaid](http://35.188.21.94:9091/graph), set end time to 2020-10-13 18:30 and length to 12 hr
+- [10/09/2020 run](http://35.188.21.94:9090/graph), set end time to 2020-10-10 08:00 and length to 6 hr
+- [10/13/2020 run](http://35.188.21.94:9092/graph), set end time to 2020-10-14 06:00 and length to 6 hr
+
 ### Analysis
-- Time of Kill 05:10:42.168898 UTC
+- Time of Kill **05:10:42.168898 UTC**
+
