@@ -223,4 +223,4 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
 - ETCD "took too long":
     - 285,247 times (288,895 total etcd lines, 98%) vs. 753,300 times on 10/09
     - first time it appeared at 00:00:41.855512 UTC, **7 minutes** after etcd starts
-    - memory usage is still higher than baseline ([this](http://35.188.21.94:9092/graph?g0.range_input=6h&g0.end_input=2020-10-14%2006%3A00&g0.expr=process_resident_memory_bytes&g0.tab=0) vs [Pre-Alkaid](http://35.188.21.94:9091/graph?g0.range_input=12h&g0.end_input=2020-10-13%2018%3A30&g0.expr=process_resident_memory_bytes&g0.tab=0))
+    - apiserver memory usage is still higher than baseline ([this](http://35.188.21.94:9092/graph?g0.range_input=6h&g0.end_input=2020-10-14%2006%3A00&g0.expr=process_resident_memory_bytes&g0.tab=0) vs [Pre-Alkaid](http://35.188.21.94:9091/graph?g0.range_input=12h&g0.end_input=2020-10-13%2018%3A30&g0.expr=process_resident_memory_bytes&g0.tab=0))
