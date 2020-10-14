@@ -217,7 +217,7 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
 ### Prometheus Server
 - [Pre-Alkaid](http://35.188.21.94:9091/graph), set end time to 2020-10-13 18:30 and length to 12 hr
 - [10/09/2020 run](http://35.188.21.94:9090/graph), set end time to 2020-10-10 08:00 and length to 6 hr
-- [10/13/2020 run](http://35.188.21.94:9092/graph), set end time to 2020-10-14 06:00 and length to 6 hr
+- **[10/13/2020 run](http://35.188.21.94:9092/graph), set end time to 2020-10-14 06:00 and length to 6 hr**
 
 ### Analysis
 - Time of Kill **05:10:42.168898 UTC**
