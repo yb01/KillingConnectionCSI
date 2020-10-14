@@ -211,3 +211,6 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
 - Perf-tests load testing failed with bunch of “connection refused” error
 - Kube-apiserver crashed with error “killing connection/stream”
 - Logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1013-daily1013-1a0w1e
+- ETCD "took too long":
+    - 285,247 times vs. 753,300 times on 10/09
+    
