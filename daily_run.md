@@ -221,5 +221,6 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
 ### Analysis
 - Time of Kill **05:10:42.168898 UTC**
 - ETCD "took too long":
-    - 285,247 times (288,895 total etcd lines, 98%) vs. 753,300 times on 10/09285247
+    - 285,247 times (288,895 total etcd lines, 98%) vs. 753,300 times on 10/09
+    - first time it appeared at 00:00:41.855512 UTC, **7 minutes** after etcd starts
     
