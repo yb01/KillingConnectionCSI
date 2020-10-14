@@ -184,7 +184,7 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201012-prealkaid
 
 ### Prometheus Server
 - [Pre-Alkaid](http://35.188.21.94:9091/graph), set end time to 2020-10-10 09:00 and length to 6 hr
-- [10/09/2020 run](http://35.188.21.94:9090/graph), set end time to 2020-10-13 19:00 and length to 12 hr
+- [10/09/2020 run](http://35.188.21.94:9090/graph), set end time to 2020-10-10 08:00 and length to 6 hr
 
 ### GCP Metrics
 - [cpu](screenshots/pre-alkaid/cpu.png)
