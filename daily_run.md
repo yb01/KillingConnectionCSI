@@ -207,3 +207,7 @@ https://github.com/futurewei-cloud/arktos-perftest/tree/perf-20201013
 - 10/09 build plus following
 - Disable APIServerConfigManager in kubelet/hollow nod
 ### Result
+- Perf-tests stopped after 5 hrs.
+- Perf-tests load testing failed with bunch of “connection refused” error
+- Kube-apiserver crashed with error “killing connection/stream”
+- Logs can be found under GCP project: workload-controller-manager on sonyadev4: /home/sonyali/logs/perf-test/gce-5000/arktos/1013-daily1013-1a0w1e
