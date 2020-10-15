@@ -1,36 +1,36 @@
 
-###Overall good readings about golang profiling:
+### Overall good readings about golang profiling:
 https://github.com/google/pprof/blob/master/doc/README.md
 https://golang.org/pkg/runtime/pprof
 https://blog.golang.org/pprof
 
-###Profile collection in Arktos perf test
+### Profile collection in Arktos perf test
 The CPU, Memory, Mutex, Block, goroutine profiles for api server is enabled as default and profile data 
 are collected every 30 minutes during the test.
 All profiles are copied over to the test server machine, e.g. //sonyadev4 after the test run along with
 all the other logs for the test. for example, the profiles were copied to the below folder for the 1001 
 test run:
-
+```
     /home/sonyali/logs/perf-test/gce-5000/arktos/1001-pprof-1a0w1e/logs/crashed/kubemarkmaster/log/pprof
-
-###Analyze the profiles
+```
+### Analyze the profiles
 A lot info can be found in the golang profiling links above. for Arktos on the server machine:
 
 1. set up the path needed:
-
+```
     export PATH=$PATH:/usr/local/go/bin
     export GOPATH=/home/sonyali/go
     export PPROF_BINARY_PATH=/home/sonyali/go/src/k8s.io/arktos/_output/dockerized/bin/linux/amd64
- 
+```
    the source files are copied to the folder already for you for the latest test run, if you see any code
    mismatch with the "list" command, you might need to update the source code in this path:
-   
+```
     /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/vendor/k8s.io/
-    
+```    
 2. go to the profile folder
-
+```bash
     cd /home/sonyali/logs/perf-test/gce-5000/arktos/1001-pprof-1a0w1e/logs/crashed/kubemarkmaster/log/pprof/
-    
+```    
 3. Examples pprof commands
 Below are few useful commands to analyze the profile data, i.e. check top resource consumptions, review the annotated code for
 details of functions and code related to the resources, comparsion of multiple profiles.
@@ -39,7 +39,7 @@ details of functions and code related to the resources, comparsion of multiple p
 and review the full picture of it.
 
 For the completed references, please refer to the golang profile doc.   
-
+```bash
 root@sonya-uswest2:/home/sonyali/logs/perf-test/gce-5000/arktos/1001-pprof-1a0w1e/logs/crashed/kubemarkmaster/log/pprof/2020-10-01-22:08:40# go tool pprof kube-apiserver-profile-2020-10-01-22:08:40.pprof
 File: kube-apiserver
 Type: cpu
@@ -137,4 +137,4 @@ er/pkg/endpoints/installer.go
          .          .   1258:
          .          .   1259:func restfulCreateNamedResource(r rest.NamedCreater, scope handlers.RequestScope, admit admission.Interface) restful.RouteFunction {
          .          .   1260:   return func(req *restful.Request, res *restful.Response) {
-
+```
