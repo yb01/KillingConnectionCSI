@@ -35,6 +35,9 @@ A lot info can be found in the golang profiling links above. for Arktos on the s
 Below are few useful commands to analyze the profile data, i.e. check top resource consumptions, review the annotated code for
 details of functions and code related to the resources, comparsion of multiple profiles.
 
+//sonyadev4 is setup to generated the graph of the profile as well, just use "pdf" command to generate the pdf file. then you can copy it over
+and review the full picture of it.
+
 For the completed references, please refer to the golang profile doc.   
 
 root@sonya-uswest2:/home/sonyali/logs/perf-test/gce-5000/arktos/1001-pprof-1a0w1e/logs/crashed/kubemarkmaster/log/pprof/2020-10-01-22:08:40# go tool pprof kube-apiserver-profile-2020-10-01-22:08:40.pprof
